@@ -3,8 +3,6 @@ name: Run unit tests
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
 
@@ -35,7 +33,7 @@ jobs:
         go-version: ^1.16
       id: go
 
-    - name: Check out code into the Go module directory
+    - name: Check out code
       uses: actions/checkout@v2
 
     - name: Install golang-migrate
